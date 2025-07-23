@@ -7,13 +7,11 @@ class ThemeBloc extends Bloc<ThemeEvents, bool> {
     on<InitTheme>((event, emit) async {
       var shared = await SharedPreferences.getInstance();
       bool? isLight = shared.getBool('theme');
-      print('from init $isLight');
-      emit(isLight ?? true);
+      emit(isLight ?? false);
     });
     on<ChangeTheme>((event, emit) async {
       var shared = await SharedPreferences.getInstance();
       await shared.setBool('theme', event.isLight);
-      print('from change $event.isLight');
       emit(event.isLight);
     });
   }

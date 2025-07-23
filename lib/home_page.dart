@@ -55,7 +55,6 @@ class HomePage extends StatelessWidget {
                     BlocProvider.of<ThemeBloc>(
                       context,
                     ).add(ChangeTheme(isLight: value));
-                    print('the new value from appBar = $value');
                   },
                 ),
               ),

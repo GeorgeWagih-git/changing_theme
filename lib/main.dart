@@ -12,7 +12,6 @@ Future<void> getDataFromShared() async {
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   getDataFromShared();
-  print('Hello');
   runApp(
     MultiBlocProvider(
       providers: [
